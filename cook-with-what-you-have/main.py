@@ -3,7 +3,7 @@ import streamlit as st
 st.set_page_config(page_title="Cook With What You Have 🍽️", layout="wide")
 st.title("Cook With What You Have 🍽️")
 
-# Recipe Data (Backend Hatakar Direct Data)
+# Recipe Data
 recipes = {
     "chicken": [
         {"name": "Grilled Chicken", "image": "https://www.themealdb.com/images/media/meals/1548772327.jpg", "description": "Juicy grilled chicken with herbs."},
@@ -60,7 +60,6 @@ if st.button("Get Recipe"):
         if best_recipe:
             st.subheader(f"🔹 Recipe: {best_recipe['name']}")
             
-            # Show Image
             st.image(best_recipe["image"], caption=best_recipe["name"], width=300)
 
             st.write(f"📖 {best_recipe['description']}")
